@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mealime is closing: how to keep your recipes · Mealwright</title>
+  <meta name="description" content="Mealime shuts down on October 21, 2026, and deletes its users' data that day. How to save your favorite recipes before then, and where Mealwright, a family dinner planner, fits.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="./"><img src="icon-256.png" alt="">Mealwright</a>
+      <nav><a class="wide" href="#save">Save your recipes</a><a href="#waitlist">Waitlist</a><a href="privacy.html">Privacy</a></nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <span class="pill">For Mealime users</span>
+          <h1>Mealime is closing. Keep your favorites.</h1>
+          <p class="lede">Mealime shuts down on October 21, 2026, and deletes everyone's data that day, with no way to export it. Here's how to save what you'd miss before then, and where Mealwright fits if you're looking for a new planner.</p>
+        </div>
+        <img class="icon" src="icon-256.png" alt="The Mealwright app icon: a dinner plate with a green check mark">
+      </div>
+
+      <section id="save">
+        <h2>Before October 21: save what you'd miss</h2>
+        <ol class="steps">
+          <li><strong>Recipes from Mealime's collection.</strong><span>Open each favorite on mealime.com and save the page: in Safari, tap Share, then Save to Files, or Print, then Save as PDF. Save its link too. Mealime's recipe pages use the standard recipe format that most recipe apps can import from a link (Mealwright can too), but only while the pages stay up, and Mealime hasn't said they will after October 21.</span></li>
+          <li><strong>Recipes you added yourself.</strong><span>They aren't on mealime.com, so copy them out now: a screenshot of each, or the text pasted into Notes.</span></li>
+          <li><strong>This week's plan and grocery list.</strong><span>Take screenshots, so the week you're in doesn't disappear halfway through.</span></li>
+        </ol>
+        <p class="note">Mealime's own successor is Meals Hub, in the apps of Albertsons Companies' stores: Safeway, Albertsons, Vons, Jewel-Osco, Acme, Shaw's, and their sister stores. If that's where you shop, it may be all you need. It plans for that chain's stores.</p>
+      </section>
+
+      <section>
+        <h2>Where Mealwright fits</h2>
+        <p>Mealwright is a weekly dinner planner for families, built by a dad for his own family's dinners. It's in private testing on iPhone now and opens to everyone in January 2027. iPhone only for now; Android comes later.</p>
+        <div class="grid">
+          <div class="card"><h3><span class="dot"></span>Planned for everyone at the table</h3><p>Each person's allergies, intolerances, diets, and dislikes, checked on every recipe. Someone who can't eat the main dish gets their own version of it.</p></div>
+          <div class="card"><h3><span class="dot green"></span>One list, any store</h3><p>The week's list, minus what's already in your kitchen. One tap fills a Walmart cart; for any other store, the list comes sorted by aisle, to check off as you shop.</p></div>
+          <div class="card"><h3><span class="dot"></span>Your recipes come with you</h3><p>Bring favorites in from a link, pasted text, or a photo of the page. And we're building an export of everything, so you're never stuck like this again.</p></div>
+          <div class="card"><h3><span class="dot green"></span>Two cooks, one plan</h3><p>Both adults see and change the same week, list, and kitchen, in sync. No ads, no pop-ups, and we never sell your data.</p></div>
+        </div>
+      </section>
+
+      <section id="waitlist">
+        <h2>Join the waitlist</h2>
+        <p>We'll invite a few Mealime planners into the beta this fall, and email everyone when Mealwright opens in January. That's all we'll send, and you can unsubscribe at any time.</p>
+        <form id="signup" class="signup" novalidate>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com">
+          <label for="store">Where do you buy most of your groceries? <span class="optional">Optional</span></label>
+          <select id="store" name="store">
+            <option value="">Choose one</option>
+            <option value="walmart">Walmart</option>
+            <option value="kroger">Kroger, or a Kroger store (Ralphs, Fred Meyer, King Soopers…)</option>
+            <option value="albertsons">Safeway, Albertsons, or another Albertsons store</option>
+            <option value="target">Target</option>
+            <option value="costco">Costco</option>
+            <option value="publix">Publix</option>
+            <option value="aldi">Aldi</option>
+            <option value="heb">H-E-B</option>
+            <option value="wholefoods">Whole Foods</option>
+            <option value="other">Somewhere else</option>
+          </select>
+          <label class="check" for="beta"><input id="beta" name="beta" type="checkbox"> I'd like to test the beta on my iPhone</label>
+          <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button id="submit" type="submit">Join the waitlist</button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="fine">We use your email only for the beta and the launch, and never sell it. The <a href="privacy.html">privacy policy</a> says how we keep it.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Mealwright isn't affiliated with Mealime or Albertsons Companies.</p>
+      <p><a href="./">Mealwright</a> · <a href="privacy.html">Privacy policy</a> · <a href="health-data.html">Consumer health data policy</a> · © 2026 Mealwright</p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var form = document.getElementById('signup');
+      var status = document.getElementById('status');
+      var button = document.getElementById('submit');
+      var endpoint = 'https://bysanihxycqsuvjgazjb.supabase.co/functions/v1/waitlist';
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var email = form.email.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          status.textContent = "That email address doesn't look right. Check it and try again.";
+          status.className = 'status error';
+          form.email.focus();
+          return;
+        }
+        button.disabled = true;
+        status.textContent = 'Adding you…';
+        status.className = 'status';
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            store: form.store.value || undefined,
+            beta: form.beta.checked,
+            source: 'mealime',
+            website: form.website.value
+          })
+        }).then(function (response) {
+          return response.json().catch(function () { return {}; }).then(function (body) {
+            if (response.ok && body.ok) {
+              var beta = form.beta.checked;
+              form.reset();
+              status.textContent = beta
+                ? "You're on the list. We'll email you when there's a place in the beta, and when Mealwright opens in January."
+                : "You're on the list. We'll email you when Mealwright opens in January.";
+              status.className = 'status done';
+            } else {
+              status.textContent = body.error || 'Something went wrong on our side. Please try again in a minute.';
+              status.className = 'status error';
+            }
+          });
+        }).catch(function () {
+          status.textContent = "We couldn't reach our server. Check your connection and try again.";
+          status.className = 'status error';
+        }).then(function () { button.disabled = false; });
+      });
+    })();
+  </script>
+</body>
+</html>

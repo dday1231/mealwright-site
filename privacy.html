@@ -17,17 +17,18 @@
 
     <main class="doc">
       <h1>Privacy policy</h1>
-      <p class="updated">Last updated September 28, 2026</p>
+      <p class="updated">Last updated October 3, 2026</p>
 
-      <p>Mealwright is an iPhone app that plans a household's dinners. This policy says what the app keeps, why, where, for how long, and how to have it removed. The short version: we keep only what's needed to plan your meals and share it with your household, we never sell it or use it for advertising, and you can ask us to delete it at any time. Allergies, intolerances, and diets are health information, and our <a href="health-data.html">consumer health data policy</a> covers them in more detail.</p>
+      <p>Mealwright is an iPhone app that plans a household's dinners. This policy says what the app keeps, why, where, for how long, and how to have it removed. The short version: we keep only what's needed to plan your meals and share it with your household, we never sell it or use it for advertising, and you can delete your account in the app at any time. Allergies, intolerances, and diets are health information, and our <a href="health-data.html">consumer health data policy</a> covers them in more detail.</p>
 
       <h2>What we collect</h2>
       <ul>
-        <li><strong>Your sign-in.</strong> Adults sign in with Apple. We receive an account identifier. Apple may offer your name the first time you sign in; Mealwright doesn't keep it. We don't ask Apple for your email address, and we never see your Apple password.</li>
+        <li><strong>Your sign-in.</strong> Adults sign in with Apple. We receive an account identifier. Apple may offer your name the first time you sign in; Mealwright uses only your first name, to fill in your own entry when you set up or join a household (you can change it), and keeps no other copy. The app then greets you by that first name. We don't ask Apple for your email address, and we never see your Apple password.</li>
         <li><strong>Your household.</strong> The first names or nicknames you give the people in your home, children included, and each person's food preferences, allergies, intolerances, and diets.</li>
         <li><strong>What you plan and cook.</strong> Your menu, recipes (including ones you import from a link, text, or photo), recipe versions, ratings, cooking times, who's cooking which night, your kitchen inventory, your grocery list, and a record of grocery orders you mark as placed.</li>
         <li><strong>What you type, say, or photograph in the app.</strong> Requests like “swap Friday for tacos”, spoken lists (turned into text on your phone), and photos of a shelf or recipe, which are used to answer or carry out the request.</li>
         <li><strong>Products you pick at a store.</strong> When you match a list item to a product at a retailer, we remember that product link so it's suggested next time.</li>
+        <li><strong>Feedback you send.</strong> What you write in Send feedback and, if you add one, a screenshot, with the app's version, the screen you sent it from, your iPhone's iOS version, and which household and person sent it. Only Mealwright's founder reads it; the rest of your household doesn't see it, and it isn't sent to our AI provider.</li>
       </ul>
       <p>We don't collect your location or contacts, and the app has no advertising or third-party analytics.</p>
 
@@ -36,13 +37,15 @@
         <li>To plan meals that are safe and suitable for everyone in your household, and to build your recipes and grocery list.</li>
         <li>To keep everyone in your household in sync. Adults who join your household see and edit the same plan, kitchen, and list.</li>
         <li>To keep track of how much AI processing each household uses, so the service stays affordable.</li>
+        <li>To answer feedback you send and fix what it's about.</li>
       </ul>
       <p>We don't sell your information, share it with advertisers, or use it to build profiles for anyone else. We don't use it to train AI models, and our AI provider's terms don't allow it to either.</p>
 
       <h2>Where it's kept, and who processes it</h2>
       <ul>
-        <li><strong>Supabase</strong> hosts our database and sign-in service, in the United States. Your household's data is readable only by members of your household. The database enforces this, not just the app. Data travels between your phone and our servers encrypted.</li>
-        <li><strong>Anthropic</strong> provides the AI model that plans meals, writes and changes recipes, answers questions, and reads photos and lists. The parts of your household's information a request needs, such as who eats what and who is allergic to what, are sent to Anthropic's API through our own server. Under Anthropic's commercial terms, API inputs aren't used to train its models, and Anthropic deletes them within 30 days (longer only if they are flagged for a safety review). Photos are processed to answer the request and aren't stored by Mealwright.</li>
+        <li><strong>Supabase</strong> hosts our database, our sign-in service, and screenshots sent with feedback, in the United States. Your household's data is readable only by members of your household, and feedback only by us. The database enforces this, not just the app. Data travels between your phone and our servers encrypted.</li>
+        <li><strong>PowerSync</strong>, a service of Journey Mobile, Inc., keeps each phone's copy of your household's data in step with our database: it receives your household's data from the database and passes each signed-in phone only its own household's data. It handles that data on our behalf, and data travels to and from it encrypted.</li>
+        <li><strong>Anthropic</strong> provides the AI model that plans meals, writes and changes recipes, answers questions, and reads photos and lists. The parts of your household's information a request needs, such as who eats what and who is allergic to what, are sent to Anthropic's API through our own server. Under Anthropic's commercial terms, API inputs aren't used to train its models, and Anthropic deletes them within 30 days (longer only if they are flagged for a safety review). Photos are processed to answer the request and aren't stored by Mealwright. The app asks on each phone before its first request goes to Anthropic, and nothing is sent until the person using it allows it; AI can be turned off again at any time under AI in Settings (My food for a child), and the rest of the app keeps working.</li>
         <li><strong>Apple</strong> handles Sign in with Apple, notifications, and app distribution.</li>
         <li><strong>Your phone</strong> keeps a copy of your household's data so the app works quickly and offline.</li>
       </ul>
@@ -50,21 +53,26 @@
       <h2>Shopping and retailers</h2>
       <p>When you shop, Mealwright opens the retailer's own website (for example Walmart, or Publix through Instacart) inside the app, or hands your list to the retailer as a cart link. You sign in to the retailer and check out on their site, under their privacy policy. Mealwright doesn't see or store your retailer password or payment details. Some cart links are affiliate links, which tell the retailer that Mealwright referred the purchase and may earn Mealwright a commission, at no cost to you.</p>
 
+      <h2>The website and its waitlist</h2>
+      <p>GitHub hosts this website. The site sets no cookies and runs no ads or third-party analytics; GitHub, like any web host, sees the address each visit comes from.</p>
+      <p>If you join the waitlist, we keep your email address, the answers you choose to give (the store you mostly buy groceries from, and whether you'd like to test the beta), the page you signed up on, and when. We use them only to email you about the beta and the launch, and the store answers to decide which stores Mealwright supports first. Supabase stores them in the United States, readable only by us. We never sell them or share them with advertisers. We keep them until you unsubscribe or ask us to delete them: every email we send has an unsubscribe link, and you can also ask us (below).</p>
+
       <h2>How long we keep it</h2>
       <ul>
         <li><strong>Your household's data</strong> stays for as long as you use Mealwright.</li>
         <li><strong>What you ask the AI</strong> isn't kept by Mealwright, except where it becomes part of your household's own record, such as a recipe's change history. Anthropic deletes it within 30 days, as above.</li>
-        <li><strong>Records of AI use</strong> (which household and person, which task, and how much processing) are kept while your household exists. They hold no content.</li>
-        <li><strong>When you ask us to delete</strong> your account, or your whole household and everything in it, we delete it from our database within 30 days and confirm when it's done. Deleting the app from your phone removes the phone's copy.</li>
+        <li><strong>Records of AI use</strong> (which task, how much processing it took and what it cost, and the household, person, and account it was for, by id) are kept for good, even after an account or household is deleted, since they are how we account for costs. They hold ids only: no names and no content.</li>
+        <li><strong>Feedback you send</strong>, and any screenshot with it, is kept until you ask us to delete it; deleting your account or household in the app deletes it too, and so does stopping a child's sign-in for what the child sent.</li>
+        <li><strong>When you delete your account</strong> in the app (Settings, then Delete my account), your sign-in is deleted at once and you're signed out everywhere. If you're the last adult signed in to your household, the household and everything in it go too, children's sign-ins included; otherwise it stays for the others, with your profile in it (your name and what you eat), which we'll remove if you ask. The app forgets your household, and copies in backups are gone within 6 months. You can also ask us to delete anything: we delete it within 30 days and confirm when it's done. Deleting the app from your phone removes the phone's copy.</li>
       </ul>
 
       <h2>Children</h2>
       <p>Mealwright is a family app. An adult sets up each person in the household, children included, with a first name or nickname and what they eat, so dinners suit everyone. That information comes from the adult, not the child.</p>
       <p>An adult can also invite a child in the household to use Mealwright with their own sign-in. A child who signs in can see the household's menu and recipes, suggest dinners (an adult decides whether to add them), rate dinners they ate, keep their likes and dislikes, mark a dinner cooked, and use the kitchen and grocery list. What a child adds is seen only by their household and is never public. A child can't shop, change settings, or change what the adults planned.</p>
-      <p>From a child who signs in, we collect an account identifier, what they add in the app, and what they type in the message box. Our AI provider, Anthropic, reads what they type in order to answer them, as it does for adults, and doesn't use it to train its models. We don't ask children for their email address, birthdate, location, or photos of themselves, and no advertising or third-party analytics run in the app.</p>
+      <p>From a child who signs in, we collect an account identifier, what they add in the app, what they type in the message box, and any feedback they send, which only we read (words only: a child can't attach a screenshot). Our AI provider, Anthropic, reads what they type in the message box in order to answer them, as it does for adults, and doesn't use it to train its models. We don't ask children for their email address, birthdate, location, or photos of themselves, and no advertising or third-party analytics run in the app.</p>
       <p>Children under 13 may have their own sign-in only with a parent's verifiable consent. Sign in with Apple and Apple's TestFlight aren't available to children under 13, and we don't knowingly let a child under 13 sign in without a parent's consent. If we learn that one has, we delete what they added. We're adding a way for a parent to give consent and a sign-in for kids that needs no Apple account or email; this policy will describe both before they're used.</p>
       <p>Teenagers use Mealwright within their household in the same way, with the same protections: no advertising, no sale of their data, and nothing designed to keep them in the app.</p>
-      <p>A parent can see what their child has added in the app, and can ask us at any time to stop their child's sign-in or to delete their child's information, by contacting us (below).</p>
+      <p>A parent can see what their child has added in the app, and can stop their child's sign-in in Settings (Kids' sign-ins), which deletes it; a child can delete their own sign-in under My food. The child's profile, which a parent set up, stays with the household. A parent can also ask us at any time to delete their child's information, by contacting us (below).</p>
 
       <h2>Changes</h2>
       <p>If we change this policy, we'll update the date at the top. If a change affects how your information is used, we'll say so in the app first, and if it affects how children's information is used, we'll ask their parents first.</p>
